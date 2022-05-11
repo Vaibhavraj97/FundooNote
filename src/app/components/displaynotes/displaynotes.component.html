@@ -1,0 +1,18 @@
+<div class="display-notes">
+    <mat-card class="note" *ngFor="let noteCard of notesArray">
+        <mat-card-content class="textArea" (click)="openDialog(noteCard)">
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <span class="mat-title">{{noteCard.title}}</span>
+            </div>
+        </mat-card-content>
+        <mat-card-content class="textArea" (click)="openDialog(noteCard)">
+            <div>
+                <span>{{noteCard.description}}</span>
+            </div>
+        </mat-card-content>
+
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <app-icons></app-icons>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,49 @@
+<div fxLayout="row wrap" fxLayoutAlign="center center" class="main">
+    <div fxLayout="row" fxLayoutGap="10" fxFlex="25" fxLayoutAlign="center center" fxFlex.xs="100" fxFlex.sm="33">
+        <mat-card class="card" fxLayoutAlign.xs="center center" fxLayoutAlign.sm="center center" box-shadow.xs="none">
+
+            <div class="fundoo" fxLayout="row" fxLayoutAlign="center center">
+                <span class="blue">F</span>
+                <span class="red">u</span>
+                <span class="yellow">n</span>
+                <span class="blue">d</span>
+                <span class="green">o</span>
+                <span class="red">o</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center" class="heading">Login </div>
+            <form [formGroup]="loginForm">
+                <div>
+                    <p>
+                        <mat-form-field class="login-form-field" appearance="outline">
+                            <mat-label>username</mat-label>
+                            <input matInput formControlName="userName" placeholder="Placeholder">
+                            <mat-icon matSuffix></mat-icon>
+                            <mat-hint></mat-hint>
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <mat-form-field class="login-form-field" appearance="outline">
+                            <mat-label>password</mat-label>
+                            <input matInput formControlName="password" placeholder="Placeholder">
+                            <mat-icon matSuffix></mat-icon>
+                            <mat-hint></mat-hint>
+                        </mat-form-field>
+                    </p>
+                </div>
+            </form>
+            <div fxLayout="column" fxLayoutAlign="space-around none" fxLayoutAlign.xs="space-around none">
+                <a routerLink="/forgotPassword" class="signin">forgot password</a>
+
+            </div>
+            <div>
+            <span fxLayout="row" fxLayout.xs="row" fxLayoutAlign.xs="space-between center"
+                fxLayoutAlign="space-between center">
+                <a routerLink="/registrationpage" class="signin">sign up instead</a>
+                <button type="submit" (click)="onSubmit()" mat-flat-button color="primary">Login</button>
+            </span>
+        </div>
+        </mat-card>
+        </div>
+        </div>

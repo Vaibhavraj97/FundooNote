@@ -1,0 +1,61 @@
+.titlebox {
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.center {
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+}
+
+.textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+  text-overflow: ellipsis;
+  box-shadow: none;
+  margin-top: 11px;
+  resize: none;
+}
+
+.example-spacer {
+  flex: 0.8 0.8 auto;
+}
+
+.opacity {
+  opacity: 0.54;
+}
+
+.closebutton {
+  letter-spacing: 0.01785714em;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  height: 36px;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  background: transparent;
+  margin-right: 15px;
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+}
+
+@media (min-width: 360px) and (max-width: 600px) {
+.center{
+  position: relative;
+  top: 40px;
+  
+  
+
+}
+
+  
+}
+

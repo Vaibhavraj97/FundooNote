@@ -1,0 +1,18 @@
+<div>
+    <div>
+    <textarea matInput class="text-Description" placeholder= "Title" style="border: none; outline: none; font-family: 'Google Sans',Roboto,Arial,sans-serif;font-size: 1rem;" [(ngModel)]="title" ></textarea>
+</div>
+<div >
+    <textarea matInput class="text-Description" placeholder= "Note" style="border: none; outline: none;font-family: 'Google Sans',Roboto,Arial,sans-serif;font-size: 1rem;" [(ngModel)]="description"></textarea>
+</div>
+<div fxLayout="row" fxLayoutAlign="space-between end">
+    <div fxFlex="70">
+        <app-icons style="padding-bottom: 40%; "  ></app-icons>
+    </div>
+</div>
+    <div>
+        <div>
+            <button mat-button (click)="onClose()" style="opacity: 0.9; margin-right: 10px;" >close</button>
+    </div>
+
+</div>

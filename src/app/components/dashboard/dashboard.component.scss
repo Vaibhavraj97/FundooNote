@@ -1,0 +1,257 @@
+.title {
+    display: inline-block;
+    font-family: "Product Sans", Arial, sans-serif;
+    font-size: 22px;
+    line-height: 24px;
+    padding-left: 8px;
+    position: relative;
+    vertical-align: middle;
+
+}
+
+.search-icon {
+    margin-left: 100px;
+    border-radius: 10px;
+    border-width: 1px 1px 1px 6px;
+    height: 20px;
+    display: flex;
+    width: 600px;
+    flex-shrink: 300px;
+}
+
+.menubutton {
+    background: transparent;
+    color: #5f6368;
+    border: none;
+    position: relative;
+    bottom: 8px;
+
+
+}
+
+.spacer {
+    flex: 1 1 auto;
+
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.sidenav-container {
+    flex: 1;
+
+}
+
+.search-bar {
+    width: 30%;
+    margin-left: 250px;
+    font-weight: 300;
+    padding-bottom: -1px;
+    justify-content: space-between;
+
+}
+
+.note-box {
+
+    display: block;
+    letter-spacing: .01428571em;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    box-sizing: border-box;
+    font-variant-ligatures: none;
+    outline: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    min-height: 46px;
+    padding: 4px 16px 12px 16px;
+    padding-top: 12px
+}
+
+.notebox {
+    display: block;
+    height: 16px;
+    width: 16px;
+    background: transparent;
+    background-color: rgba(0, 0, 0, .2);
+    background-clip: padding-box;
+    border: solid transparent;
+    border-width: 1px 1px 1px 6px;
+    min-height: 28px;
+    padding: 100px 0 0;
+}
+
+
+
+#sidenav.menu-close {
+    width: 70px;
+
+}
+
+#sidenav.menu-open {
+    width: 240px;
+
+
+}
+
+@media (min-width: 360px) and (max-width: 600px) {
+    .search-bar {
+        visibility: hidden;
+    }
+
+    .search-icon {
+        margin-left: -100px;
+        border-radius: 10px;
+        border-width: 10px;
+        height: 8px;
+        display: flex;
+        width: 120px;
+        flex-shrink: 300px;
+
+    }
+
+    .menu-bar {
+        position: relative;
+        right: 30px;
+    }
+
+    .img-example {
+        position: relative;
+        left: -50px;
+    }
+
+
+
+    .Toolbar {
+        position: fixed;
+        z-index: 2;
+        height: 10px;
+        width: 150px;
+        margin: 10px;
+
+    }
+
+
+
+    .title {
+        display: inline-block;
+        font-family: "Product Sans", Arial, sans-serif;
+        font-size: 10px;
+        line-height: 5px;
+        padding-left: 0px;
+        position: relative;
+        vertical-align: middle;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        margin-right: 50px;
+        position: relative;
+        left: -50px;
+    }
+
+    .mat-toolbar-single-row {
+        height: 36px;
+    }
+
+
+    .material-icons {
+        font-size: 10px;
+        margin-left: 0px;
+    }
+
+    .icon-img1 {
+
+        position: relative;
+        right: 18px;
+
+    }
+
+    .icon-img2 {
+        position: relative;
+        right: 43px;
+    }
+
+    .icon-img3 {
+        position: relative;
+        right: 68px;
+    }
+
+    .dropbtn {
+        position: relative;
+        right: 113px;
+    }
+
+    .icon-img4 {
+        position: relative;
+        right: 16px;
+
+    }
+
+
+    .sidenav-icons {
+        opacity: 0.7;
+        background-color: #feefc3;
+
+    }
+
+
+    .mat-card mat-focus-indicator {
+        width: 100px;
+        position: relative;
+        left: 10px;
+
+    }
+
+    .img-example {
+        position: relative;
+        right: 20px;
+
+        height: 30px;
+
+    }
+
+    .listbuttons {
+        border-radius: 0 25px 25px 0;
+        position: relative;
+        top: 18px;
+        height: 90px;
+    }
+
+}
+
+
+
+
+
+.button {
+    margin-left: 30px;
+    font-size: 15px;
+}
+
+.listbuttons {
+    border-radius: 0 25px 25px 0;
+
+}
+
+
+
+.listbuttons:hover {
+    background-color: #feefc3;
+}
+
+.listbuttons:active {
+    background-color: #feefc3;
+}
+
+.listbuttonsbackground {
+    background: transparent;
+    border: none;
+}

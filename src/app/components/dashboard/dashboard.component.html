@@ -1,0 +1,81 @@
+<div class="container">
+    <mat-toolbar class="Toolbar">
+        <button class="menu-bar" mat-icon-button (click)="snav.toggle()" style=" opacity:0.7;">
+            <mat-icon >menu</mat-icon>
+        </button>
+        <img    class = "img-example" src="./../../../assets/images/keep_2020q4_48dp.png" alt="image" style="width: 40px; margin-left: 8px;">
+        <h1 class="title">Fundoo</h1>
+        <div   style="display: flex;flex-direction: row; " >
+            <mat-card   class="search-icon">
+                <img   src="../../../assets/images/search_black_24dp.svg" style="opacity: 0.54; width: 23px ;height: 23px;">
+                <input 
+                    style="border: none; width: 600px;overflow: hidden;font-family: 16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif; font-size: 16px;"
+                    matInput type="text" >
+                <button style="margin-top: -3px;" class="menubutton" matSuffix mat-icon-button aria-label="Clear">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-card>
+        </div>
+        <div class="spacer"></div>
+        <div class="img-icon">
+        <button   class="icon-img1" mat-icon-button style=" opacity:0.7; margin-left: 10px;">
+            <img  style="width: 28px;" src="./../../../assets/images/refresh_black_24dp.svg" alt="settings">
+        </button>
+        <button mat-icon-button style=" opacity:0.7; margin-left: 10px;">
+            <img class="icon-img2" style="width: 28px;" src="./../../../assets/images/listview.svg" alt="settings">
+        </button>
+        <button mat-icon-button style="margin-right: 30px; opacity:0.7; margin-left: 10px;">
+            <img  class="icon-img3" style="width: 28px;" src="./../../../assets/images/settings_black_24dp.svg" alt="settings">
+        </button>
+
+        <button   mat-icon-button style=" opacity:0.7;" class="dropbtn">
+            <mat-icon style="font-size: 28px;">apps</mat-icon>
+        </button>
+        <button mat-icon-button style=" opacity:0.7;" class="dropbtn" [matMenuTriggerFor]="menu" matTooltip="More"
+            matTooltipClass="tooltip"> 
+            <mat-icon style="font-size: 28px;" class="icon-img4">account_circle</mat-icon>
+            <mat-menu #menu="matMenu">
+            </mat-menu>
+    </button>
+    </div>
+    </mat-toolbar>
+    <mat-divider></mat-divider>
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav mode="side" #snav style="width: 250px;">
+            <mat-nav-list style="width: 280px;overflow: hidden; border: transparent;">
+                <a mat-list-item class="listbuttons">
+                    <button mat-icon-button style=" opacity:0.7; ">
+                        <img src="./../../../assets/images/lightbulb_black_24dp.svg">
+                    </button><span class="button"> Notes </span>
+                </a>
+                <a mat-list-item class="listbuttons">
+                    <button mat-icon-button style=" opacity:0.7 ">
+                        <img src="./../../../assets/images/notifications_black_24dp.svg">
+                    </button><span class="button"> Reminders </span>
+                </a>
+                <a mat-list-item class="listbuttons">
+                    <button mat-icon-button style=" opacity:0.7">
+                        <img src="./../../../assets/images/edit_black_24dp.svg">
+                    </button><span class="button"> Edit labels </span>
+                </a>
+                <a mat-list-item class="listbuttons">
+                    <button mat-icon-button style=" opacity:0.7 ">
+                        <img src="./../../../assets/images/archive_black_24dp.svg">
+                    </button><span class="button"> Archive </span>
+                </a>
+                <a mat-list-item class="listbuttons">
+                    <button mat-icon-button style=" opacity:0.7">
+                        <img src="./../../../assets/images/delete_black_24dp.svg">
+                    </button><span class="button"> Trash </span>
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-container>
+    </div>
+
+
+   
+
