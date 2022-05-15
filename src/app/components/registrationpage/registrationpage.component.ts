@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.nullValidator],
-      
+      service:'advance'
     })
   }
 
@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
         lastName: this.registerForm.value.lastName,
         email: this.registerForm.value.email,
         password: this.registerForm.value.password,
-        
+        service:'advance',
       }
       this.user.registrationpage(reqData).subscribe((response: any) => {
         console.log(response);

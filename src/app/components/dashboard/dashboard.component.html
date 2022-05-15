@@ -46,7 +46,7 @@
                 <a mat-list-item class="listbuttons">
                     <button mat-icon-button style=" opacity:0.7; ">
                         <img src="./../../../assets/images/lightbulb_black_24dp.svg">
-                    </button><span class="button"> Notes </span>
+                    </button><span (click)="onnote()" class="button"> Notes </span>
                 </a>
                 <a mat-list-item class="listbuttons">
                     <button mat-icon-button style=" opacity:0.7 ">
@@ -61,12 +61,12 @@
                 <a mat-list-item class="listbuttons">
                     <button mat-icon-button style=" opacity:0.7 ">
                         <img src="./../../../assets/images/archive_black_24dp.svg">
-                    </button><span class="button"> Archive </span>
+                    </button><span class="button" (click)="onarchive()"> Archive </span>
                 </a>
                 <a mat-list-item class="listbuttons">
                     <button mat-icon-button style=" opacity:0.7">
                         <img src="./../../../assets/images/delete_black_24dp.svg">
-                    </button><span class="button"> Trash </span>
+                    </button><span class="button" (click)="ontrash()">Trash </span>
                 </a>
             </mat-nav-list>
         </mat-sidenav>

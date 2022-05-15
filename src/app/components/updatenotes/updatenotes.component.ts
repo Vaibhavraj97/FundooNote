@@ -7,7 +7,7 @@ import { NoteService } from "./../../components/services/noteservices/note.servi
   styleUrls: ['./updatenotes.component.scss']
 })
 export class UpdatenotesComponent implements OnInit {
-  [x: string]: any;
+  [x: string]:any;
   title: any;
   description: any;
   noteId: any;

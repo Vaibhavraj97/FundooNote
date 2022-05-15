@@ -7,6 +7,7 @@ import { HttpService } from '../httpservices/http.service';
   providedIn: 'root'
 })
 export class NoteService {
+
   
   
   
@@ -54,8 +55,62 @@ getNoteList(){
     }
     return this.httpService.postService('/notes/updateNotes', reqData, true, header)
   }
+ deletenoteservice(reqData: any) {
+    this.token = localStorage.getItem('token')
+    console.log(reqData);
+
+    let headers = {
+      headers: new HttpHeaders({
+
+        'Content-type': 'application/json',
+        'Authorization': this.token
+      })
+
+    }
+    return this.httpService.postService('/notes/trashNotes', reqData, true, headers)
+  }
+  archivenoteservice(reqData:any){
+    console.log("notes are archived",reqData)
+
+    let headers ={
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.httpService.postService('/notes/archiveNotes',reqData,true,headers)
+  }
+  getArchiveNotes(){
+    console.log("archive service");
+
+    let header ={
+
+      headers : new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization' : this.token
+      })
+    }
+    return this.httpService.getService('/notes/getArchiveNotesList',true,header)
+  }
+ 
+  getTrashNotes(){
+    
+    console.log("trash noteservice");
+
+    let header ={
+      headers : new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization' : this.token
+      })
+    }
+    return this.httpService.getService('/notes/getTrashNotesList',true,header)
+  }
+
+
 
 }
+
+
     
   
 

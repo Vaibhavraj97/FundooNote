@@ -28,6 +28,9 @@ import { IconsComponent } from './components/icons/icons.component';
 import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
 import { UpdatenotesComponent } from './components/updatenotes/updatenotes.component';
 import { MatDialogModule } from "@angular/material/dialog";
+import { TrashlistComponent } from './components/trashlist/trashlist.component';
+import { ArchivelistComponent } from "./components/archivelist/archivelist.component";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +43,10 @@ import { MatDialogModule } from "@angular/material/dialog";
     TakeanoteComponent,
     IconsComponent,
     DisplaynotesComponent,
-    UpdatenotesComponent
+    UpdatenotesComponent,
+    TrashlistComponent,
+    ArchivelistComponent
+
   ],
   imports: [
     BrowserModule,

@@ -35,4 +35,31 @@ export class NoteService {
     }
     return this.httpService.postService('/notes/updateNotes', reqData, true, header)
   }
+  archivenoteservice(){
+    console.log("inside the archive service");
+
+    let header ={
+
+      headers : new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization' : this.token
+      })
+    }
+    return this.httpService.getService('/notes/getArchiveNotesList',true,header)
+  }
+trashnoteservice(){
+    
+    console.log("inside the trash noteservice");
+
+    let header ={
+      headers : new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization' : this.token
+      })
+    }
+    return this.httpService.getService('/notes/getTrashNotesList',true,header)
+  }
+
+ 
+
 }

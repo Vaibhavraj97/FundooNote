@@ -41,7 +41,8 @@
             <span fxLayout="row" fxLayout.xs="row" fxLayoutAlign.xs="space-between center"
                 fxLayoutAlign="space-between center">
                 <a routerLink="/registrationpage" class="signin">sign up instead</a>
-                <button type="submit" (click)="onSubmit()" mat-flat-button color="primary">Login</button>
+                <button type="submit" (click)="onSubmit()" mat-flat-button color="primary" class="next-button" routerLink="/dashboard">Login</button>
+                
             </span>
         </div>
         </mat-card>

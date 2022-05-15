@@ -13,6 +13,7 @@
 }
 
 $size: 100%;
+
 .login-form-field {
     width: 100%;
 }
@@ -43,7 +44,7 @@ $size: 100%;
 
 .fundoo {
     font-size: 25px;
-   
+
 }
 
 .heading {
@@ -66,4 +67,15 @@ $size: 100%;
 
 .green {
     color: #34a853;
+}
+
+@media only screen and (max-width: 490px) {
+    .form-field{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .form-field{
+        width: 100%;
+    }
 }

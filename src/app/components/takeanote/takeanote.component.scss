@@ -1,9 +1,14 @@
 .titlebox {
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
+
+  margin: 20px 0px 20px 0px;
+  display: flex;
+  width: 580px;
+  flex-direction: column;
+  align-content: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px gray;
+  border: 1px solid lightgray;
   overflow: hidden;
-  background-color: transparent;
 }
 
 .center {
@@ -47,15 +52,22 @@
   bottom: 14px;
 }
 
-@media (min-width: 360px) and (max-width: 600px) {
-.center{
+
+
+
+
+@media(max-width: 600px) {
+.titlebox{
+  width:330px;
   position: relative;
   top: 40px;
-  
-  
 
 }
 
-  
-}
 
+}
+@media (max-width: 500px) {
+  .titlebox{
+      width: 315px ;
+  }
+}

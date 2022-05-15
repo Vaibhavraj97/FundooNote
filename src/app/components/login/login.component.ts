@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.formbuilder.group({
       userName: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-     
+     service:'advance'
     })
   }
 
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     let reqData = {
       email: this.loginForm.value.userName,
       password: this.loginForm.value.password,
-      
+      service:'advance'
     }
     this.user.login(reqData).subscribe((response: any) => {
       console.log(response);

@@ -1,24 +1,29 @@
 <div fxLayout="row" fxLayoutAlign="space-between center">
-	<button mat-icon-button matTooltip="Remind me">
+	<button mat-icon-button >
 		<img class="icons" src="./../../../assets/images/add_alert_black_24dp.svg" alt="add_alert">
 	</button>
 
-	<button mat-icon-button matTooltip="Collaorator">
+	<button mat-icon-button >
 		<img class="icons" src="./../../../assets/images/person_add_alt_black_24dp.svg" alt="person_add_alt">
 	</button>
 
 
 	<div style="margin-bottom: -5px">
-		<button mat-icon-button matTooltip="palette">
+		<button mat-icon-button >
 			<img class="icons" src="./../../../assets/images/palette_black_24dp.svg" alt="palette">
 		</button>
 
 	</div>
-	<button mat-icon-button matTooltip="Add image">
+	<button mat-icon-button >
 		<img class="icons" src="./../../../assets/images/image_black_24dp.svg" alt="image">
 	</button>
 
-	<button mat-icon-button matTooltip="archive">
+	<button mat-icon-button (click)="onarchive()" >
 		<img class="icons" src="./../../../assets/images/archive_black_24dp.svg" alt="archive">
 	</button>
-	 </div>
+
+	<button mat-icon-button [matMenuTriggerFor]="menu">
+		<mat-icon style="font-size: 20px; opacity: 0.71; position: relative; right: 19px;">more_vert</mat-icon>
+		<mat-menu #menu="matMenu">
+			<button mat-menu-item (click)="ondelete()">Delete note</button>
+		</mat-menu>

@@ -13,5 +13,15 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onnote(){
+this.router.navigateByUrl('/dashboard/getallnotes')
+  }
 
+  onarchive(){
+this.router.navigateByUrl('/dashboard/archive')
+
+  }
+ontrash(){
+  this.router.navigateByUrl('/dashboard/trash')
+}
 }

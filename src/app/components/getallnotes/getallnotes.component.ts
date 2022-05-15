@@ -7,8 +7,6 @@ import { NoteService } from "src/app/components/services/noteservices/note.servi
 })
 export class GetallnotesComponent implements OnInit {
  
-  // notes: any ;
-  // noteService: any;
   noteList: any;
 
   
@@ -26,6 +24,10 @@ getAllNotes(){
 this. noteService.getNoteList().subscribe((response:any)=>{
   console.log("getAllNotessuccessfull",response.data);
   this.noteList=response.data.data;
+  this.noteList=this.noteList.filter((data:any)=>{
+    console.log("notes ")
+    return data.isArchived ==false && data.isDeleted == false;
+  })
  
 })
 
