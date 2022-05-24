@@ -30,6 +30,11 @@ import { UpdatenotesComponent } from './components/updatenotes/updatenotes.compo
 import { MatDialogModule } from "@angular/material/dialog";
 import { TrashlistComponent } from './components/trashlist/trashlist.component';
 import { ArchivelistComponent } from "./components/archivelist/archivelist.component";
+import { AuthguardServiceService } from "./components/services/authguard-service.service";
+import { UpdatelabelnoteComponent } from './updatelabelnote/updatelabelnote.component';
+import { DisplaylabelComponent } from './components/displaylabel/displaylabel.component';
+import { FilterPipe } from './Pipes/filter.pipe';
+import { AddlabelComponent } from './components/addlabel/addlabel.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +50,13 @@ import { ArchivelistComponent } from "./components/archivelist/archivelist.compo
     DisplaynotesComponent,
     UpdatenotesComponent,
     TrashlistComponent,
-    ArchivelistComponent
+    ArchivelistComponent,
+    UpdatelabelnoteComponent,
+    DisplaylabelComponent,
+    FilterPipe,
+    AddlabelComponent
+   
+    
 
   ],
   imports: [
@@ -67,9 +78,10 @@ import { ArchivelistComponent } from "./components/archivelist/archivelist.compo
     MatDividerModule,
     MatListModule,
     MatExpansionModule ,
-    MatDialogModule 
+    MatDialogModule
+    
   ],
-  providers: [],
+  providers: [ AuthguardServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

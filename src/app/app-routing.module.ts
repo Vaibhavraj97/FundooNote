@@ -8,7 +8,10 @@ import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { GetallnotesComponent } from "./components/getallnotes/getallnotes.component";
 import { ArchivelistComponent } from "./components/archivelist/archivelist.component";
 import {  TrashlistComponent} from "./components/trashlist/trashlist.component";
+import { AuthenticationGuard } from "./authentication.guard";
 const routes: Routes = [
+  {  path: '', redirectTo: "/login", pathMatch: 'full'},
+  
   { path: "registrationpage", component: RegisterComponent  },
   { path: "login", component: LoginComponent },
   { path: "forgotPassword", component: ForgotpasswordComponent },
@@ -16,7 +19,7 @@ const routes: Routes = [
   
   
   { 
-    path: "dashboard", component: DashboardComponent ,
+    path: "dashboard", component: DashboardComponent, canActivate:[AuthenticationGuard],
 
   children: [
     { path: '', redirectTo: "/dashboard/getallnotes", pathMatch: 'full' },

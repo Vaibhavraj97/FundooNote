@@ -13,6 +13,17 @@
     border-radius: 10px;
     box-shadow: 1px 1px 4px gray;
     border: 1px solid lightgray;
-    width: 250px;
+    width: 200px;
+    // height:150px;
     justify-content: space-between;
+    overflow: visible;
+}
+@media (max-width: 726px) {
+    .note{
+        width: 100%;
+        margin: 20px;
+    }
+    .display-notes{
+        justify-content: center;
+    }
 }

@@ -1,29 +1,69 @@
 <div fxLayout="row" fxLayoutAlign="space-between center">
-	<button mat-icon-button >
+	<button mat-icon-button *ngIf=!isTrashed >
 		<img class="icons" src="./../../../assets/images/add_alert_black_24dp.svg" alt="add_alert">
 	</button>
 
-	<button mat-icon-button >
+	<button mat-icon-button  *ngIf=!isTrashed >
 		<img class="icons" src="./../../../assets/images/person_add_alt_black_24dp.svg" alt="person_add_alt">
 	</button>
 
 
 	<div style="margin-bottom: -5px">
-		<button mat-icon-button >
+		<button button style="background-color: transparent;border: none;" [matMenuTriggerFor]="colorMenu"  *ngIf=!isTrashed>
 			<img class="icons" src="./../../../assets/images/palette_black_24dp.svg" alt="palette">
 		</button>
+		<mat-menu #colorMenu="matMenu">
+			<button *ngFor="let noteColor of colors" mat-mini-fab [style.background]="noteColor?.bgColorValue"
+				(click)="changeColor(noteColor?.bgColorValue)">
+			</button>
+		</mat-menu>
 
 	</div>
-	<button mat-icon-button >
+	<button mat-icon-button  *ngIf=!isTrashed >
 		<img class="icons" src="./../../../assets/images/image_black_24dp.svg" alt="image">
 	</button>
 
-	<button mat-icon-button (click)="onarchive()" >
+	<button mat-icon-button (click)="onarchive()"*ngIf="!isArchived && !isTrashed" >
 		<img class="icons" src="./../../../assets/images/archive_black_24dp.svg" alt="archive">
-	</button>
+  </button>
+ 
 
-	<button mat-icon-button [matMenuTriggerFor]="menu">
+
+<button mat-icon-button (click)="onunarchive()" *ngIf="isArchived && !isTrashed" matTooltip="Unarchive">
+	<img class="icons" src="./../../../assets/images/unarchive-24px.svg" alt="Unarchive">
+</button>
+
+<button mat-icon-button (click)="ondeleteforever()" *ngIf="!isArchived && isTrashed" matTooltip="delete">
+	<img class="icons" src="./../../../assets/images/delete_forever_black_24dp (1).svg" alt="deleteforeve">
+</button>
+
+<button *ngIf="!isArchived && isTrashed" mat-icon-button (click)="onrestore()"  matTooltip="restore">
+	<img class="icons" src="./../../../assets/images/restore_from_trash_black_24dp.svg" alt="restore">
+</button>
+
+
+
+
+	<button mat-icon-button [matMenuTriggerFor]="menu" *ngIf=!isTrashed>
 		<mat-icon style="font-size: 20px; opacity: 0.71; position: relative; right: 19px;">more_vert</mat-icon>
 		<mat-menu #menu="matMenu">
 			<button mat-menu-item (click)="ondelete()">Delete note</button>
+			<button mat-menu-item  [matMenuTriggerFor]="menulabel">Add Label</button>
+			<mat-icon-button [matMenuTriggerFor]="menulabel"></mat-icon-button>
+			<mat-menu #menulabel="matMenu">
+				<div class="userDetail">
+					<div fxLayout="row wrap" fxLayoutAlign="center">
+						<div> <h1>Label Note</h1>
+							<div class="label-notes" class="labels"  label class="container" *ngFor="let label of labelList">
+							 <input type="checkbox" (click)="oncheckmark(label)" class="btn btn-success">  
+								<span class="label-text" >{{label.label}}</span></div>
+							
+								<div class="close">
+									<button matSuffix mat-icon-button aria-label="label" text-align="left" (click)="onClose()">Close</button>
+								  </div>
+								</div>
+					</div>
+				</div>
+			</mat-menu>
 		</mat-menu>
+		

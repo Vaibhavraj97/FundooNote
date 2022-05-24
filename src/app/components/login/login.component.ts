@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
   
   loginForm!: FormGroup;
   submitted: boolean = false;
-
+   users:any;
   constructor(private formbuilder: FormBuilder, public user: UserService, private router: Router) { }
 
 
@@ -23,6 +23,9 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]],
      service:'advance'
     })
+
+
+
   }
 
   onSubmit() {
@@ -35,6 +38,7 @@ export class LoginComponent implements OnInit {
     this.user.login(reqData).subscribe((response: any) => {
       console.log(response);
       localStorage.setItem('token',response.id)
+      localStorage.setItem('userId',response.userId)
     },(error)=>{console.log(error)})
   }
 }

@@ -1,13 +1,13 @@
-<div>
-    <div>
-    <textarea matInput class="text-Description" placeholder= "Title" style="border: none; outline: none; font-family: 'Google Sans',Roboto,Arial,sans-serif;font-size: 1rem;" [(ngModel)]="title" ></textarea>
+<div class="notecolor" [style.background]="color">
+    <div [style.background]="color">
+    <textarea matInput class="text-Description" [style.background]="color" placeholder= "Title" style="border: none; outline: none; font-family: 'Google Sans',Roboto,Arial,sans-serif;font-size: 1rem;" [(ngModel)]="title" ></textarea>
 </div>
-<div >
-    <textarea matInput class="text-Description" placeholder= "Note" style="border: none; outline: none;font-family: 'Google Sans',Roboto,Arial,sans-serif;font-size: 1rem;" [(ngModel)]="description"></textarea>
+<div [style.background]="color">
+    <textarea matInput class="text-Description" [style.background]="color"placeholder= "Note" style="border: none; outline: none;font-family: 'Google Sans',Roboto,Arial,sans-serif;font-size: 1rem;" [(ngModel)]="description"></textarea>
 </div>
 <div fxLayout="row" fxLayoutAlign="space-between end">
-    <div fxFlex="30">
-        <app-icons style="padding-bottom: 40%; "  ></app-icons>
+    <div fxFlex="30"> 
+        <app-icons [noteObject]="data" (iconstodisplay)="callingiconstodisplaynotes($event)"></app-icons>
     </div>
 </div>
     <div>

@@ -6,7 +6,10 @@ import { NoteService } from "src/app/components/services/noteservices/note.servi
   styleUrls: ['./archivelist.component.scss']
 })
 export class ArchivelistComponent implements OnInit {
- archiveList: any;
+ archiveList: any
+ 
+ isArchived= true
+
 
   constructor(private noteService:NoteService) { }
 
@@ -18,8 +21,16 @@ getArchiveList(){
     console.log("get all archive", response);
     this.archiveList =response
     this.archiveList = this.archiveList.data.data
+    this.archiveList=this.archiveList.filter((data:any)=>{
+      console.log("notes ")
+        return data.isArchived ==true && data.isDeleted == false;
+      
+})
+  
+  })
 }
-  )};
-  }
+displayMessage(event:any){
+  this.getArchiveList();
+}
 
-
+}

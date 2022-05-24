@@ -6,6 +6,12 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class HttpService {
+  httpClient: any;
+  url!: string;
+  
+  deleteservice(arg0: string, reqData: any, arg2: boolean, headers: { headers: import("@angular/common/http").HttpHeaders; }) {
+    throw new Error('Method not implemented.');
+  }
  
   // getService(arg0: string, arg1: boolean, headers: { headers: import("@angular/common/http").HttpHeaders; }) {
   //   throw new Error('Method not implemented.');
@@ -24,6 +30,11 @@ export class HttpService {
   getService(url : string, token : boolean=false, httpOptions : any){
     
     return this.httpclient.get(this.baseUrl+url, token && httpOptions)
+
+  }
+  deleteService(url : string, token : boolean=false, httpOptions : any){
+    
+    return this.httpclient.delete(this.baseUrl+url, token && httpOptions)
 
   }
 

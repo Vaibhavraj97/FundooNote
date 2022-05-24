@@ -1,5 +1,5 @@
 <div class="display-notes">
-    <mat-card class="note" *ngFor="let noteCard of notesArray">
+    <mat-card class="note" *ngFor="let noteCard of notesArray | filter:filterString"  [style.background]="noteCard.color">
         <mat-card-content class="textArea" (click)="openDialog(noteCard)">
             <div fxLayout="row" fxLayoutAlign="space-between center">
                 <span class="mat-title">{{noteCard.title}}</span>
@@ -12,7 +12,7 @@
         </mat-card-content>
 
         <div fxLayout="row" fxLayoutAlign="space-between center">
-            <app-icons [noteObject]="noteCard"></app-icons>
+            <app-icons [noteObject]="noteCard" (iconstodisplay)="callingiconstodisplaynotes($event)"></app-icons>
         </div>
     </mat-card>
 </div>

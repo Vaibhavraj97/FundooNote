@@ -1,6 +1,6 @@
 <div class="getlist" fxlayout="coloumn" fxlayoutAlign="center center">
-    <app-takeanote> </app-takeanote>
+    <app-takeanote (messageEvent)="receiveMessage($event)"></app-takeanote>
     <div class="display" fxlayout="row" fxlayoutAlign="start start">
-        <app-displaynotes [notesArray]="noteList"></app-displaynotes>
+        <app-displaynotes [notesArray]="noteList"  (noteUpdated)="updatedData($event)" ></app-displaynotes>
     </div>
 </div>

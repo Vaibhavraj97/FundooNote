@@ -1,0 +1,25 @@
+<div>
+  <h1 mat-dialog-title>Edit label</h1>
+  <mat-icon>close</mat-icon>
+  <textarea class="textarea" matinput placeholder="create new label" [(ngModel)]="label"></textarea>
+  <button matSuffix mat-icon-button aria-label="label" (click)="onDone()">
+    <mat-icon>done</mat-icon>
+  </button>
+  <div class="label-notes" class="labels" *ngFor="let label of labelList">
+    <div fxLayout="row" fxLayoutAlign="space-between center"> <button mat-icon-button (click)="onDelete(label)"style=" opacity:0.7 ">
+        <img class="delete" src="./../../assets/images/delete.jpeg" alt="delete"> </button>
+      <input class="textarea" type="email" matinput *ngIf="label.isUpdate" [(ngModel)]="updatedLabel">
+      <span class="label-text" *ngIf="!label.isUpdate">{{label.label}}</span>
+      <button mat-icon-button *ngIf="!label.isUpdate" (click)="label.isUpdate = true;updatedLabel=label.label">
+        <img class="edit" src="./../../assets/images/WhatsApp Image 2022-05-17 at 12.05.52 PM.jpeg" alt="editor">
+      </button>
+      <button matSuffix mat-icon-button aria-label="label" *ngIf="label.isUpdate" (click)="onUpdate(label)">
+        <mat-icon>done</mat-icon>
+      </button>
+    </div>
+  </div>
+<u></u>
+  <div class="close">
+  <button matSuffix mat-icon-button aria-label="label" text-align="left" (click)="onClose()">Close</button>
+</div>
+</div>

@@ -11,12 +11,9 @@ export class UpdatenotesComponent implements OnInit {
   title: any;
   description: any;
   noteId: any;
-
+color:any;
   constructor(private NoteService: NoteService, public dialogRef: MatDialogRef<UpdatenotesComponent>,
-     @Inject(MAT_DIALOG_DATA) public data: any) {
-
-
-  }
+     @Inject(MAT_DIALOG_DATA) public data: any) { this.color=data.color}
 
   ngOnInit(): void {
     console.log(this.data);
@@ -36,6 +33,9 @@ export class UpdatenotesComponent implements OnInit {
       this.dialogRef.close(reqData);
     })
     
+  }
+  callingiconstodisplaynotes(event: any){
+    this.color=event.data.color
   }
 }
 

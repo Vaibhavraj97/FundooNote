@@ -20,4 +20,7 @@ getTrashList(){
     this.trashList = this.trashList.data.data
 });
 }
+receiveMessagefromdisplaynotes($event:any){
+console.log("insidegetallnotes", $event);
+}
 }

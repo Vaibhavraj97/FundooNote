@@ -60,6 +60,21 @@ trashnoteservice(){
     return this.httpService.getService('/notes/getTrashNotesList',true,header)
   }
 
- 
+  changecolorservice(reqData:any){
+    console.log("color change service")
+    let header ={
+      headers: new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization': this.token
+      })
+    }
+  
+    return this.httpService.postService('/notes/changesColorNotes',reqData, true,header)
+  }
 
-}
+
+
+ }
+
+
+

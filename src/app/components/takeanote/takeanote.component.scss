@@ -7,8 +7,9 @@
   align-content: center;
   border-radius: 5px;
   box-shadow: 1px 1px 4px gray;
-  border: 1px solid lightgray;
+  border: 1px solid red;
   overflow: hidden;
+  
 }
 
 .center {
@@ -53,21 +54,29 @@
 }
 
 
-
-
-
-@media(max-width: 600px) {
-.titlebox{
-  width:330px;
-  position: relative;
-  top: 40px;
-
-}
-
-
-}
-@media (max-width: 500px) {
+@media (max-width: 726px) {
   .titlebox{
-      width: 315px ;
+      width: 250px;
+      margin: 20px;
+  }
+  .display-notes{
+      justify-content: center;
   }
 }
+
+
+// @media(max-width: 600px) {
+// .titlebox{
+//   width:330px;
+//   position: relative;
+//   top: 40px;
+
+// }
+
+
+// }
+// @media (max-width: 500px) {
+//   .titlebox{
+//       width: 315px ;
+//   }
+// }

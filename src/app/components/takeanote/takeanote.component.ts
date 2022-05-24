@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {NoteService}   from "src/app/components/services/noteservices/note.service";
 
@@ -17,7 +17,7 @@ export class TakeanoteComponent implements OnInit {
   span1: boolean = false;
   token:any;
 
-
+  @Output() messageEvent =new EventEmitter<string>();
 
   constructor(private NoteService: NoteService,public router:Router,private activeRoute:ActivatedRoute) { 
   
@@ -48,6 +48,11 @@ export class TakeanoteComponent implements OnInit {
     this.NoteService.takeNoteService(reqData).subscribe((response: any) => {
 
       console.log(response);
+      this.messageEvent.emit(response)
+      console.log("messageevent",this.messageEvent)
     });
   }
 }
+
+
+
